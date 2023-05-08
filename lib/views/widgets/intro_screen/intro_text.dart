@@ -42,6 +42,7 @@ class IntroText extends StatelessWidget {
             fontSize: smallSpacing + spacing,
             color: primaryColor,
             fontFamily: pacifico,
+            fontWeight: FontWeight.w400,
           ),
         ),
       );

@@ -15,7 +15,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => const MaterialApp(
-        home: SignUpScreen(),
+        home: SignInScreen(),
         // onGenerateRoute: _routes,
       );
 

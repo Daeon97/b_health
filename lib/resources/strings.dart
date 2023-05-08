@@ -11,7 +11,16 @@ const signUpScreenRoute = '/signUp';
 const _rootImagePath = 'assets/images';
 const authBottomImagePath = '$_rootImagePath/auth_bottom_image.png';
 const bHealthLogoImagePath = '$_rootImagePath/b_health_logo_image.png';
+const emailAddressPrefixImagePath =
+    '$_rootImagePath/email_address_prefix_image.png';
+const hidePasswordSuffixImagePath =
+    '$_rootImagePath/hide_password_suffix_image.png';
 const introImagePath = '$_rootImagePath/intro_image.png';
+const passwordPrefixImagePath = '$_rootImagePath/password_prefix_image.png';
+const showPasswordSuffixImagePath =
+    '$_rootImagePath/show_password_suffix_image.png';
+const signInImagePath = '$_rootImagePath/sign_in_image.png';
+const signUpImagePath = '$_rootImagePath/sign_up_image.png';
 const splashImagePath = '$_rootImagePath/splash_image.png';
 
 // Font families
@@ -30,6 +39,9 @@ const passwordLiteral = 'Password';
 const confirmPasswordLiteral = 'Confirm Password';
 const alreadyHaveAnAccountLiteral = 'Already have an account?';
 const dontHaveAnAccountLiteral = "Don't have an account?";
+const submitLiteral = 'Submit';
+const logInLiteral = 'Log In';
+const forgotPasswordLiteral = 'Forgot Password?';
 
 // Special characters
 const newLine = '\n';

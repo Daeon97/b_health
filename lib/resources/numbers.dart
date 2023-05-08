@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs
 
+const nilSpacing = 0.0;
 const veryTinySpacing = 1.0;
 const tinySpacing = 2.0;
 const smallSpacing = 8.0;
