@@ -7,7 +7,6 @@ import 'package:b_health/views/screens/home_screen.dart';
 import 'package:b_health/views/screens/intro_screen.dart';
 import 'package:b_health/views/screens/sign_in_screen.dart';
 import 'package:b_health/views/screens/sign_up_screen.dart';
-import 'package:b_health/views/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -17,7 +16,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => const MaterialApp(
-        home: BioDataScreen(),
+        home: HomeScreen(),
         // onGenerateRoute: _routes,
       );
 
@@ -39,7 +38,7 @@ class App extends StatelessWidget {
               return const BioDataScreen();
             defaultCase:
             default:
-              return const SplashScreen();
+              return const SizedBox.shrink();
           }
         },
       );

@@ -15,3 +15,8 @@ const firstDate = 1960;
 const initialDateYear = 1997;
 const initialDateMonth = 9;
 const initialDateDay = 29;
+
+// home screen dimens
+const homeTopLayoutHeight = 233.0;
+const homeTopLayoutBorderRadius = 30.0;
+const homeCircleAvatarRadius = 22.0;

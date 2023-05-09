@@ -18,6 +18,7 @@ class _IntroScreenState extends State<IntroScreen> {
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.white,
         body: Stack(
+          alignment: AlignmentDirectional.center,
           children: [
             Align(
               alignment: AlignmentDirectional.bottomEnd,

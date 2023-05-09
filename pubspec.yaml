@@ -15,15 +15,25 @@ dependencies:
   firebase_core: ^2.11.0
   cloud_firestore: ^4.6.0
   firebase_auth: ^4.5.0
+  flutter_native_splash: ^2.2.19
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   very_good_analysis: ^4.0.0+1
 
+flutter_native_splash:
+  color: "#242038"
+  image: assets/images/splash_image.png
+  android_12:
+    color: "#242038"
+    image: assets/images/splash_image.png
+  android: true
+  ios: false
+  web: false
+
 flutter:
   uses-material-design: true
-
   assets:
     - assets/images/
 

@@ -41,6 +41,7 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) => Scaffold(
         backgroundColor: Colors.white,
         body: Stack(
+          alignment: AlignmentDirectional.center,
           children: [
             Align(
               alignment: AlignmentDirectional.bottomEnd,

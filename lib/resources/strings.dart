@@ -16,6 +16,7 @@ const emailAddressPrefixImagePath =
     '$_rootImagePath/email_address_prefix_image.png';
 const hidePasswordSuffixImagePath =
     '$_rootImagePath/hide_password_suffix_image.png';
+const homeTopImage = '$_rootImagePath/home_top_image.png';
 const introImagePath = '$_rootImagePath/intro_image.png';
 const passwordPrefixImagePath = '$_rootImagePath/password_prefix_image.png';
 const showPasswordSuffixImagePath =
@@ -73,6 +74,8 @@ const officeWorkerLiteral = 'Office Worker';
 const factoryWorkerLiteral = 'Factory Worker';
 const artisanWorkerLiteral = 'Artisan Worker';
 const farmerLiteral = 'Farmer';
+const howAreYouTodayLiteral = 'How are you today?';
+const takeAssessmentLiteral = 'Take Assessment';
 
 // Special characters
 const newLine = '\n';
