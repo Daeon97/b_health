@@ -6,6 +6,7 @@ const homeScreenRoute = '/home';
 const introScreenRoute = '/intro';
 const signInScreenRoute = '/signIn';
 const signUpScreenRoute = '/signUp';
+const bioDataScreenRoute = '/bioData';
 
 // Image paths
 const _rootImagePath = 'assets/images';
@@ -42,6 +43,36 @@ const dontHaveAnAccountLiteral = "Don't have an account?";
 const submitLiteral = 'Submit';
 const logInLiteral = 'Log In';
 const forgotPasswordLiteral = 'Forgot Password?';
+const bioDataLiteral = 'Bio-data';
+const fullNameLiteral = 'Full Name';
+const dateOfBirthLiteral = 'Date of Birth';
+const genderLiteral = 'Gender';
+const bloodGroupLiteral = 'Blood Group';
+const weightKgLiteral = 'Weight (Kg)';
+const heightCmLiteral = 'Height (Cm)';
+const doYouHaveAnyChronicMedicalConditionLiteral =
+    'Do you have any chronic medial condition?';
+const doYouHaveAFamilyHistoryOfCancerLiteral =
+    'Do you have a family history of cancer?';
+const maritalStatusLiteral = 'Marital Status';
+const occupationLiteral = 'Occupation';
+const maleLiteral = 'Male';
+const femaleLiteral = 'Female';
+const otherLiteral = 'Other';
+const aLiteral = 'A';
+const bLiteral = 'B';
+const aBLiteral = 'AB';
+const oLiteral = 'O';
+const singleLiteral = 'Single';
+const marriedLiteral = 'Married';
+const divorcedLiteral = 'Divorced';
+const widowedLiteral = 'Widowed';
+const yesLiteral = 'Yes';
+const noLiteral = 'No';
+const officeWorkerLiteral = 'Office Worker';
+const factoryWorkerLiteral = 'Factory Worker';
+const artisanWorkerLiteral = 'Artisan Worker';
+const farmerLiteral = 'Farmer';
 
 // Special characters
 const newLine = '\n';

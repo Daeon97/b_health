@@ -1,6 +1,8 @@
 // ignore_for_file: public_member_api_docs
 
+import 'package:b_health/resources/colors.dart';
 import 'package:b_health/resources/strings.dart';
+import 'package:b_health/views/screens/bio_data_screen.dart';
 import 'package:b_health/views/screens/home_screen.dart';
 import 'package:b_health/views/screens/intro_screen.dart';
 import 'package:b_health/views/screens/sign_in_screen.dart';
@@ -15,7 +17,7 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => const MaterialApp(
-        home: SignInScreen(),
+        home: BioDataScreen(),
         // onGenerateRoute: _routes,
       );
 
@@ -33,6 +35,8 @@ class App extends StatelessWidget {
               return const SignInScreen();
             case signUpScreenRoute:
               return const SignUpScreen();
+            case bioDataScreenRoute:
+              return const BioDataScreen();
             defaultCase:
             default:
               return const SplashScreen();

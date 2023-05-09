@@ -3,8 +3,8 @@
 import 'package:b_health/resources/colors.dart';
 import 'package:b_health/resources/numbers.dart';
 import 'package:b_health/resources/strings.dart';
-import 'package:b_health/views/widgets/auth_related_screens/sign_in_sign_up_submit_button.dart';
-import 'package:b_health/views/widgets/auth_related_screens/sign_in_sign_up_submit_field.dart';
+import 'package:b_health/views/widgets/sign_in_sign_up_submit/sign_in_sign_up_submit_button.dart';
+import 'package:b_health/views/widgets/sign_in_sign_up_submit/sign_in_sign_up_submit_field.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 

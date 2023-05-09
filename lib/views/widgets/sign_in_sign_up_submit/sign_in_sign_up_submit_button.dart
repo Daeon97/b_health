@@ -105,7 +105,7 @@ class SignInSignUpSubmitButton extends StatelessWidget {
             );
           case ButtonType.submit:
             throw ArgumentError(
-              'Bad Argument! Sign up screen has no sign in button',
+              'Bad Argument! Sign up screen has no submit button',
             );
         }
         break;
