@@ -26,9 +26,10 @@ class _HomeScreenState extends State<HomeScreen> {
             fontWeight: FontWeight.w500,
           ),
           unselectedLabelStyle: const TextStyle(
-              fontSize: smallSpacing + tinySpacing + tinySpacing,
-              fontFamily: inter,
-              fontWeight: FontWeight.w500),
+            fontSize: smallSpacing + tinySpacing + tinySpacing,
+            fontFamily: inter,
+            fontWeight: FontWeight.w500,
+          ),
           unselectedItemColor: Colors.white,
           items: List<BottomNavigationBarItem>.generate(
             tinySpacing.toInt() + tinySpacing.toInt(),
@@ -93,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              CircleAvatar(
+                              const CircleAvatar(
                                 radius: homeCircleAvatarRadius,
                                 backgroundColor: Colors.white,
                               ),
@@ -101,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 height: smallSpacing,
                               ),
                               RichText(
-                                text: TextSpan(
+                                text: const TextSpan(
                                   children: [
                                     TextSpan(
                                       text: 'Hi Lily,',
@@ -135,10 +136,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 height: spacing,
                               ),
                               ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () =>
+                                    Navigator.of(context).pushNamed(
+                                  takeAssessmentScreenRoute,
+                                ),
                                 style: ButtonStyle(
                                   backgroundColor:
-                                      MaterialStatePropertyAll<Color>(
+                                      const MaterialStatePropertyAll<Color>(
                                     homeTakeAssessmentButtonColor,
                                   ),
                                   shape:
@@ -149,7 +153,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       ),
                                     ),
                                   ),
-                                  padding: MaterialStatePropertyAll<
+                                  padding: const MaterialStatePropertyAll<
                                       EdgeInsetsGeometry>(
                                     EdgeInsets.symmetric(
                                       vertical: veryTinySpacing +
@@ -159,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 ),
-                                child: Text(
+                                child: const Text(
                                   takeAssessmentLiteral,
                                   style: TextStyle(
                                     fontSize: spacing - veryTinySpacing,
