@@ -20,3 +20,4 @@ const initialDateDay = 29;
 const homeTopLayoutHeight = 233.0;
 const homeTopLayoutBorderRadius = 30.0;
 const homeCircleAvatarRadius = 22.0;
+const homeCardHeight = 130.0;

@@ -14,16 +14,26 @@ const authBottomImagePath = '$_rootImagePath/auth_bottom_image.png';
 const bHealthLogoImagePath = '$_rootImagePath/b_health_logo_image.png';
 const emailAddressPrefixImagePath =
     '$_rootImagePath/email_address_prefix_image.png';
+const heightImagePath =
+    '$_rootImagePath/height_image.png';
 const hidePasswordSuffixImagePath =
     '$_rootImagePath/hide_password_suffix_image.png';
-const homeTopImage = '$_rootImagePath/home_top_image.png';
+const historyImagePath = '$_rootImagePath/history_image.png';
+const homeImagePath = '$_rootImagePath/home_image.png';
+const homeTopImagePath = '$_rootImagePath/home_top_image.png';
 const introImagePath = '$_rootImagePath/intro_image.png';
 const passwordPrefixImagePath = '$_rootImagePath/password_prefix_image.png';
+const profileImagePath = '$_rootImagePath/profile_image.png';
+const pulseImagePath =
+    '$_rootImagePath/pulse_image.png';
+const settingImagePath = '$_rootImagePath/setting_image.png';
 const showPasswordSuffixImagePath =
     '$_rootImagePath/show_password_suffix_image.png';
 const signInImagePath = '$_rootImagePath/sign_in_image.png';
 const signUpImagePath = '$_rootImagePath/sign_up_image.png';
 const splashImagePath = '$_rootImagePath/splash_image.png';
+const weightImagePath =
+    '$_rootImagePath/weight_image.png';
 
 // Font families
 const pacifico = 'Pacifico';
@@ -76,6 +86,21 @@ const artisanWorkerLiteral = 'Artisan Worker';
 const farmerLiteral = 'Farmer';
 const howAreYouTodayLiteral = 'How are you today?';
 const takeAssessmentLiteral = 'Take Assessment';
+const enterValidInputLiteral = 'Enter a valid input';
+const scheduleLiteral = 'Schedule';
+const weigthLiteral = 'Weight';
+const heightLiteral = 'Height';
+const pulseLiteral = 'Pulse';
+const eightFiveLiteral = '85';
+const kgLiteral = 'KG';
+const oneSevenThreeLiteral = '17.3';
+const cmLiteral = 'CM';
+const oneTwoTwoLiteral = '122';
+const bpmLiteral = 'BPM';
+const homeLiteral = 'Home';
+const historyLiteral = 'History';
+const profileLiteral = 'Profile';
+const settingLiteral = 'Setting';
 
 // Special characters
 const newLine = '\n';

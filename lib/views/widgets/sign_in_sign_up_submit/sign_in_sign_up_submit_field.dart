@@ -53,7 +53,6 @@ class _SignInSignUpSubmitFieldState extends State<SignInSignUpSubmitField> {
 
   @override
   void dispose() {
-    widget.fieldController.dispose();
     _focusNode
       ..removeListener(_onFocusChanged)
       ..dispose();
@@ -129,6 +128,7 @@ class _SignInSignUpSubmitFieldState extends State<SignInSignUpSubmitField> {
           focusNode: _focusNode,
           keyboardType: _keyboardType,
           obscureText: obscureTextValue ?? false,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           decoration: InputDecoration(
             prefixIcon: _computePrefixIcon(
               focusedValue,
@@ -161,8 +161,8 @@ class _SignInSignUpSubmitFieldState extends State<SignInSignUpSubmitField> {
               ),
             ),
           ),
-          // validator: _validator,
-          // onFieldSubmitted: _onFieldSubmitted,
+          validator: (value) =>
+              value != null && value.isEmpty ? enterValidInputLiteral : null,
         );
         break;
       case FieldType.dateOfBirth:
@@ -199,6 +199,7 @@ class _SignInSignUpSubmitFieldState extends State<SignInSignUpSubmitField> {
             );
           },
           child: TextFormField(
+            autovalidateMode: AutovalidateMode.onUserInteraction,
             controller: widget.fieldController,
             enabled: false,
             decoration: InputDecoration(
@@ -232,6 +233,8 @@ class _SignInSignUpSubmitFieldState extends State<SignInSignUpSubmitField> {
                 ),
               ),
             ),
+            validator: (value) =>
+                value != null && value.isEmpty ? enterValidInputLiteral : null,
           ),
         );
         break;
@@ -243,6 +246,7 @@ class _SignInSignUpSubmitFieldState extends State<SignInSignUpSubmitField> {
       case FieldType.familyHistoryOfCancer:
         field = DropdownButtonFormField<String>(
           items: _dropdownMenuItems,
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           onChanged: (value) {
             // TODO: Implement onChanged
           },
@@ -278,8 +282,8 @@ class _SignInSignUpSubmitFieldState extends State<SignInSignUpSubmitField> {
               ),
             ),
           ),
-          // validator: _validator,
-          // onFieldSubmitted: _onFieldSubmitted,
+          validator: (value) =>
+              value != null && value.isEmpty ? enterValidInputLiteral : null,
         );
         break;
     }

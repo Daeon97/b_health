@@ -1,5 +1,7 @@
 // ignore_for_file: public_member_api_docs
 
+import 'package:b_health/blocs/screen_to_show_cubit/screen_to_show_cubit.dart';
+import 'package:b_health/models/screen_to_show.dart';
 import 'package:b_health/resources/colors.dart';
 import 'package:b_health/resources/numbers.dart';
 import 'package:b_health/resources/strings.dart';
@@ -7,6 +9,7 @@ import 'package:b_health/views/widgets/sign_in_sign_up_submit/sign_in_sign_up_su
 import 'package:b_health/views/widgets/sign_in_sign_up_submit/sign_in_sign_up_submit_field.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignUpScreen extends StatefulWidget {
   const SignUpScreen({super.key});
@@ -137,7 +140,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
                           ),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              // TODO: Implement onTap
+                              BlocProvider.of<ScreenToShowCubit>(context)
+                                  .setScreenToShow(
+                                Screen.signIn,
+                              );
                             },
                         ),
                       ],

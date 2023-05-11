@@ -1,9 +1,12 @@
 // ignore_for_file: public_member_api_docs
 
+import 'package:b_health/blocs/screen_to_show_cubit/screen_to_show_cubit.dart';
+import 'package:b_health/models/screen_to_show.dart';
 import 'package:b_health/resources/colors.dart';
 import 'package:b_health/resources/numbers.dart';
 import 'package:b_health/resources/strings.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 enum ButtonType {
   signUp,
@@ -32,7 +35,9 @@ class SignInSignUpSubmitButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ElevatedButton(
-        onPressed: _onPressed,
+        onPressed: () => _onPressed(
+          context,
+        ),
         style: ButtonStyle(
           backgroundColor: _buttonBackgroundColor,
           shape: MaterialStatePropertyAll<OutlinedBorder>(
@@ -69,21 +74,21 @@ class SignInSignUpSubmitButton extends StatelessWidget {
         ),
       );
 
-  void _onPressed() {
+  void _onPressed(
+    BuildContext context,
+  ) {
     switch (from) {
       case From.introScreen:
         switch (buttonType) {
           case ButtonType.signUp:
-            /*
-                TODO: Implement onPressed
-                  for ButtonType.signUp
-               */
+            BlocProvider.of<ScreenToShowCubit>(context).setScreenToShow(
+              Screen.signUp,
+            );
             break;
           case ButtonType.signIn:
-            /*
-                TODO: Implement onPressed
-                  for ButtonType.signIn
-               */
+            BlocProvider.of<ScreenToShowCubit>(context).setScreenToShow(
+              Screen.signIn,
+            );
             break;
           case ButtonType.submit:
             throw ArgumentError(
@@ -94,10 +99,12 @@ class SignInSignUpSubmitButton extends StatelessWidget {
       case From.signUpScreen:
         switch (buttonType) {
           case ButtonType.signUp:
-            /*
-                TODO: Implement onPressed
-                  for ButtonType.signUp
-               */
+            // if (formKey?.currentState?.validate() != null &&
+            //     formKey!.currentState!.validate() == true) {
+            BlocProvider.of<ScreenToShowCubit>(context).setScreenToShow(
+              Screen.bioData,
+            );
+            // }
             break;
           case ButtonType.signIn:
             throw ArgumentError(
@@ -116,10 +123,9 @@ class SignInSignUpSubmitButton extends StatelessWidget {
               'Bad Argument! Sign in screen has no sign up button',
             );
           case ButtonType.signIn:
-            /*
-                TODO: Implement onPressed
-                  for ButtonType.signUp
-               */
+            BlocProvider.of<ScreenToShowCubit>(context).setScreenToShow(
+              Screen.bioData,
+            );
             break;
           case ButtonType.submit:
             throw ArgumentError(
@@ -138,10 +144,16 @@ class SignInSignUpSubmitButton extends StatelessWidget {
               'Bad Argument! Biodata screen has no sign in button',
             );
           case ButtonType.submit:
-            /*
-                TODO: Implement onPressed
-                  for ButtonType.submit
-               */
+            // Future.delayed(
+            //   const Duration(
+            //     seconds: 5,
+            //   ),
+            //   () {
+            BlocProvider.of<ScreenToShowCubit>(context).setScreenToShow(
+              Screen.home,
+            );
+            // },
+            // );
             break;
         }
         break;
