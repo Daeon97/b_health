@@ -16,8 +16,16 @@ const initialDateYear = 1997;
 const initialDateMonth = 9;
 const initialDateDay = 29;
 
-// home screen dimens
+// Home screen dimens
 const homeTopLayoutHeight = 233.0;
 const homeTopLayoutBorderRadius = 30.0;
 const homeCircleAvatarRadius = 22.0;
 const homeCardHeight = 130.0;
+
+// Options count
+const oneOption = 1;
+const twoOptions = 2;
+const threeOptions = 3;
+
+// Durations
+const pageAnimationDurationInMilliSeconds = 300;

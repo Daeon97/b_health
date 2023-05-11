@@ -143,7 +143,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 style: ButtonStyle(
                                   backgroundColor:
                                       const MaterialStatePropertyAll<Color>(
-                                    homeTakeAssessmentButtonColor,
+                                    homeTakeAssessmentAndAssessmentNextButtonColor,
                                   ),
                                   shape:
                                       MaterialStatePropertyAll<OutlinedBorder>(

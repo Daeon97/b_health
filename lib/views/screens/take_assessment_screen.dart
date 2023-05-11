@@ -3,8 +3,8 @@
 import 'package:b_health/resources/colors.dart';
 import 'package:b_health/resources/numbers.dart';
 import 'package:b_health/resources/strings.dart';
-import 'package:b_health/views/widgets/take_assessment_screen/field.dart';
-import 'package:b_health/views/widgets/take_assessment_screen/question.dart';
+import 'package:b_health/views/widgets/take_assessment_screen/first_page.dart';
+import 'package:b_health/views/widgets/take_assessment_screen/second_page.dart';
 import 'package:flutter/material.dart';
 
 class TakeAssessmentScreen extends StatefulWidget {
@@ -15,38 +15,41 @@ class TakeAssessmentScreen extends StatefulWidget {
 }
 
 class _TakeAssessmentScreenState extends State<TakeAssessmentScreen> {
-  late TextEditingController questionOneController;
+  late PageController _pageController;
 
   @override
   void initState() {
-    questionOneController = TextEditingController();
+    _pageController = PageController();
     super.initState();
   }
 
   @override
   void dispose() {
-    questionOneController.dispose();
+    _pageController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(
-              vertical: largeSpacing + spacing,
-              horizontal: spacing,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: const [
-                    CircleAvatar(
-                      radius: homeCircleAvatarRadius,
-                      backgroundColor: primaryColor,
-                    ),
-                    Expanded(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(
+                top: largeSpacing + spacing,
+                bottom: spacing,
+                left: spacing,
+                right: spacing,
+              ),
+              child: Row(
+                children: const [
+                  CircleAvatar(
+                    radius: homeCircleAvatarRadius,
+                    backgroundColor: primaryColor,
+                  ),
+                  Expanded(
+                    child: Align(
+                      alignment: AlignmentDirectional.center,
                       child: Text(
                         assessmentLiteral,
                         style: TextStyle(
@@ -57,18 +60,25 @@ class _TakeAssessmentScreenState extends State<TakeAssessmentScreen> {
                         ),
                       ),
                     ),
-                  ],
-                ),
-                Question(
-                  text: questionOneLiteral,
-                  fieldController: questionOneController,
-                ),
-                const Question(
-                  text: questionTwoLiteral,
-                ),
-              ],
+                  ),
+                ],
+              ),
             ),
-          ),
+            Expanded(
+              child: PageView(
+                controller: _pageController,
+                physics: const NeverScrollableScrollPhysics(),
+                children: [
+                  FirstPage(
+                    pageController: _pageController,
+                  ),
+                  SecondPage(
+                    pageController: _pageController,
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       );
 }

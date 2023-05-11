@@ -108,6 +108,8 @@ const howAreYouTodayLiteral = 'How are you today?';
 const takeAssessmentLiteral = 'Take Assessment';
 const enterValidInputLiteral = 'Enter a valid input';
 const scheduleLiteral = 'Schedule';
+const startLiteral = 'Start';
+const stopLiteral = 'Stop';
 const weigthLiteral = 'Weight';
 const heightLiteral = 'Height';
 const pulseLiteral = 'Pulse';
@@ -117,12 +119,14 @@ const oneSevenThreeLiteral = '17.3';
 const cmLiteral = 'CM';
 const oneTwoTwoLiteral = '122';
 const bpmLiteral = 'BPM';
+const assessmentHintLiteral = 'mm/yyyy';
 const homeLiteral = 'Home';
 const historyLiteral = 'History';
 const profileLiteral = 'Profile';
 const settingLiteral = 'Setting';
 const assessmentLiteral = 'Assessment';
-const questionOneLiteral = 'How often do you for medical check-up in a month?';
+const questionOneLiteral =
+    'How often do you go for medical check-up in a month?';
 const questionTwoLiteral =
     'Have you been diagnosed with any kind of disease before?';
 const questionThreeLiteral = 'If yes, Specify which disease(s)';
@@ -175,4 +179,5 @@ const questionTwentyNineLiteral =
 // Special characters
 const newLine = '\n';
 const whiteSpace = ' ';
+const emptyString = '';
 const leadingBullet = '•';
