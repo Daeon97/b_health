@@ -32,55 +32,65 @@ class _TakeAssessmentScreenState extends State<TakeAssessmentScreen> {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        body: Stack(
+          alignment: AlignmentDirectional.topCenter,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(
-                top: largeSpacing + spacing,
-                bottom: spacing,
-                left: spacing,
-                right: spacing,
-              ),
-              child: Row(
-                children: const [
-                  CircleAvatar(
-                    radius: homeCircleAvatarRadius,
-                    backgroundColor: primaryColor,
-                  ),
-                  Expanded(
-                    child: Align(
-                      alignment: AlignmentDirectional.center,
-                      child: Text(
-                        assessmentLiteral,
-                        style: TextStyle(
-                          fontSize: spacing + tinySpacing + tinySpacing,
-                          color: Colors.black,
-                          fontFamily: pacifico,
-                          fontWeight: FontWeight.w400,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
+            Align(
+              alignment: AlignmentDirectional.bottomEnd,
+              child: Image.asset(
+                authBottomImagePath,
               ),
             ),
-            Expanded(
-              child: PageView(
-                controller: _pageController,
-                // physics: const NeverScrollableScrollPhysics(),
-                children: [
-                  FirstPage(
-                    pageController: _pageController,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    top: largeSpacing + spacing,
+                    bottom: spacing,
+                    left: spacing,
+                    right: spacing,
                   ),
-                  SecondPage(
-                    pageController: _pageController,
+                  child: Row(
+                    children: const [
+                      CircleAvatar(
+                        radius: homeCircleAvatarRadius,
+                        backgroundColor: primaryColor,
+                      ),
+                      Expanded(
+                        child: Align(
+                          alignment: AlignmentDirectional.center,
+                          child: Text(
+                            assessmentLiteral,
+                            style: TextStyle(
+                              fontSize: spacing + tinySpacing + tinySpacing,
+                              color: Colors.black,
+                              fontFamily: pacifico,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
-                  ThirdPage(
-                    pageController: _pageController,
+                ),
+                Expanded(
+                  child: PageView(
+                    controller: _pageController,
+                    children: [
+                      FirstPage(
+                        pageController: _pageController,
+                      ),
+                      SecondPage(
+                        pageController: _pageController,
+                      ),
+                      ThirdPage(
+                        pageController: _pageController,
+                      ),
+                    ],
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ],
         ),

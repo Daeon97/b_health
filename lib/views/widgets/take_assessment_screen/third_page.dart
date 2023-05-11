@@ -120,11 +120,8 @@ class _ThirdPageState extends State<ThirdPage> {
                 height: spacing + tinySpacing + tinySpacing,
               ),
               ElevatedButton(
-                onPressed: () => widget.pageController.nextPage(
-                  duration: const Duration(
-                    milliseconds: pageAnimationDurationInMilliSeconds,
-                  ),
-                  curve: Curves.easeIn,
+                onPressed: () => Navigator.of(context).pushReplacementNamed(
+                  assessmentResultScreenRoute,
                 ),
                 style: ButtonStyle(
                   backgroundColor: const MaterialStatePropertyAll<Color>(

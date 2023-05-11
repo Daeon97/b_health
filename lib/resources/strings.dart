@@ -8,9 +8,11 @@ const signInScreenRoute = '/signIn';
 const signUpScreenRoute = '/signUp';
 const bioDataScreenRoute = '/bioData';
 const takeAssessmentScreenRoute = '/takeAssessment';
+const assessmentResultScreenRoute = '/assessmentResult';
 
 // Image paths
 const _rootImagePath = 'assets/images';
+const assessmentImagePath = '$_rootImagePath/assessment_image.png';
 const authBottomImagePath = '$_rootImagePath/auth_bottom_image.png';
 const bHealthLogoImagePath = '$_rootImagePath/b_health_logo_image.png';
 const emailAddressPrefixImagePath =
@@ -68,6 +70,7 @@ const confirmPasswordLiteral = 'Confirm Password';
 const alreadyHaveAnAccountLiteral = 'Already have an account?';
 const dontHaveAnAccountLiteral = "Don't have an account?";
 const submitLiteral = 'Submit';
+const doneLiteral = 'Done';
 const logInLiteral = 'Log In';
 const nextLiteral = 'Next';
 const forgotPasswordLiteral = 'Forgot Password?';
@@ -125,6 +128,9 @@ const historyLiteral = 'History';
 const profileLiteral = 'Profile';
 const settingLiteral = 'Setting';
 const assessmentLiteral = 'Assessment';
+const hundredPercentSafeLiteral = '100% safe';
+const andInTheClearLiteral = 'and in the clear';
+const areYouSureYouWantToExitLiteral = 'Are you sure you want to exit?';
 const questionOneLiteral =
     'How often do you go for medical check-up in a month?';
 const questionTwoLiteral =

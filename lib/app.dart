@@ -4,6 +4,7 @@ import 'package:b_health/blocs/screen_to_show_cubit/screen_to_show_cubit.dart';
 import 'package:b_health/models/screen_to_show.dart';
 import 'package:b_health/resources/colors.dart';
 import 'package:b_health/resources/strings.dart';
+import 'package:b_health/views/screens/assessment_result_screen.dart';
 import 'package:b_health/views/screens/bio_data_screen.dart';
 import 'package:b_health/views/screens/home_screen.dart';
 import 'package:b_health/views/screens/intro_screen.dart';
@@ -65,6 +66,8 @@ class App extends StatelessWidget {
               return const BioDataScreen();
             case takeAssessmentScreenRoute:
               return const TakeAssessmentScreen();
+            case assessmentResultScreenRoute:
+              return const AssessmentResultScreen();
             default:
               return const SizedBox.shrink();
           }
