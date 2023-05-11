@@ -5,6 +5,7 @@ import 'package:b_health/resources/numbers.dart';
 import 'package:b_health/resources/strings.dart';
 import 'package:b_health/views/widgets/take_assessment_screen/first_page.dart';
 import 'package:b_health/views/widgets/take_assessment_screen/second_page.dart';
+import 'package:b_health/views/widgets/take_assessment_screen/third_page.dart';
 import 'package:flutter/material.dart';
 
 class TakeAssessmentScreen extends StatefulWidget {
@@ -67,12 +68,15 @@ class _TakeAssessmentScreenState extends State<TakeAssessmentScreen> {
             Expanded(
               child: PageView(
                 controller: _pageController,
-                physics: const NeverScrollableScrollPhysics(),
+                // physics: const NeverScrollableScrollPhysics(),
                 children: [
                   FirstPage(
                     pageController: _pageController,
                   ),
                   SecondPage(
+                    pageController: _pageController,
+                  ),
+                  ThirdPage(
                     pageController: _pageController,
                   ),
                 ],

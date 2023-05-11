@@ -38,8 +38,18 @@ class _SecondPageState extends State<SecondPage> {
                   notSureLiteral,
                 ],
               ),
-              const Question(
-                text: questionSixteenLiteral,
+              const SizedBox(
+                height: spacing,
+              ),
+              const Text(
+                questionSixteenLiteral,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: spacing - tinySpacing,
+                  color: primaryColor,
+                  fontFamily: inter,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
               Row(
                 children: const [
